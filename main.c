@@ -7,6 +7,8 @@
  *
  * Return: Always 0
  */
+
+/* test file */
 int main(void)
 {
 	int len;
