@@ -1,4 +1,5 @@
 #include "main.h"
+/* Function prototype for print_buffer */
 
 void print_buffer(char buffer[], int *buff_ind);
 
@@ -9,6 +10,7 @@ void print_buffer(char buffer[], int *buff_ind);
  */
 int _printf(const char *format, ...)
 {
+	/* Variable declarations */
 	int i, printed = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_ind = 0;
 	va_list list;
@@ -21,6 +23,7 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
+	/* get prefx */
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
@@ -30,8 +33,10 @@ int _printf(const char *format, ...)
 			{
 				print_buffer(buffer, &buff_ind);
 			}
-			/* write(1, &format[i], 1);*/
-			printed_chars++;
+
+		/* write(1, &format[i], 1);*/
+
+		printed_chars++;
 		}
 		else
 		{
