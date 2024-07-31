@@ -1,4 +1,4 @@
-#include "main.h"
+
 /* Function prototype for print_buffer */
 
 void print_buffer(char buffer[], int *buff_ind);
